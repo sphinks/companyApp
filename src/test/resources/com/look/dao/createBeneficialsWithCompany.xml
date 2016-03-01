@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <company id="1" name="company1" address="Nikolskaya str., 14" city="Moscow" country="Russia"
+             email="test@company1.com" phone_number="+7 495 111 11 11"/>
+    <beneficial id="1" company_id="1" name="Jack Sparrow"/>
+    <beneficial id="2" company_id="1" name="John Bull"/>
+</dataset>

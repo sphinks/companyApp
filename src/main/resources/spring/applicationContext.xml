@@ -1,0 +1,37 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <import resource="${profile}Context.xml" />
+
+    <context:annotation-config/>
+
+    <!-- Path to scan auto imported components -->
+    <context:component-scan base-package="com.look" />
+
+    <!-- Decalaring beans -->
+    <bean id="responseUtils" class="com.look.utils.ResponseUtils"/>
+    <bean id="serviceThrowableMapper" class="com.look.webservices.mappers.ServiceThrowableMapper">
+        <property name="responseUtils" ref="responseUtils"/>
+    </bean>
+
+    <!-- MyBatis mappers configuration -->
+    <bean id="companyDao" class="org.mybatis.spring.mapper.MapperFactoryBean">
+        <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
+        <property name="mapperInterface" value="com.look.dao.CompanyDao" />
+    </bean>
+    <bean id="beneficialDao" class="org.mybatis.spring.mapper.MapperFactoryBean">
+        <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
+        <property name="mapperInterface" value="com.look.dao.BeneficialDao" />
+    </bean>
+
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource" />
+        <property name="configLocation" value="classpath:config/mybatisV3.xml"/>
+    </bean>
+
+</beans>

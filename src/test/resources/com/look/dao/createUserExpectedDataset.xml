@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <users username="test" google_reg_id="12345" email="test@email.com" apple_reg_id="apple12345"/>
+    <users username="test2" google_reg_id="54321" email="test2@email.com"/>
+</dataset>

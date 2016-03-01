@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <company name="company1" address="Nikolskaya str., 14" city="Moscow" country="Russia"
+            email="test@company1.com" phone_number="+7 495 111 11 11"/>
+    <company name="company2" address="Bishop's Gate str., 1" city="London" country="England"
+             email="test@company2.com" phone_number="+44 11 222 11 11"/>
+</dataset>

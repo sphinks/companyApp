@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.look.dao.BeneficialDao">
+
+    <select id="getCompanyBeneficials" resultType="com.look.model.Beneficial">
+        select * from beneficial where company_id=#{company_id} order by id
+    </select>
+    <insert id="addBeneficial" parameterType="com.look.model.Beneficial" useGeneratedKeys="true" keyProperty="beneficial.id" keyColumn="id">
+        insert into beneficial (company_id, name)
+        values (#{beneficial.companyId}, #{beneficial.name})
+    </insert>
+    <delete id="deleteBeneficialForCompany">
+        delete from beneficial where company_id = #{company_id}
+    </delete>
+</mapper>

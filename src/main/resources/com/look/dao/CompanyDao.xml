@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.look.dao.CompanyDao">
+    <resultMap id="company" type="com.look.model.Company">
+        <id property="id" column="id"/>
+        <collection
+            property="beneficials"
+            column="id"
+            javaType="List"
+            ofType="Beneficial"
+            select="com.look.dao.BeneficialDao.getCompanyBeneficials"
+            fetchType="eager"
+        />
+    </resultMap>
+
+    <select id="getAllCompanies" resultType="com.look.model.Company" resultMap="company">
+        select * from company order by id
+    </select>
+
+    <select id="getCompanyInfo" resultType="com.look.model.Company" resultMap="company">
+        select * from company where id = #{companyId}
+    </select>
+
+    <insert id="addCompanyInfo" parameterType="com.look.model.Company" useGeneratedKeys="true" keyProperty="company.id" keyColumn="id">
+        insert into company (name, address, city, country, email, phone_number)
+        values (#{company.name}, #{company.address}, #{company.city}, #{company.country}, #{company.email}, #{company.phoneNumber})
+    </insert>
+    <update id="updateCompanyInfo" parameterType="com.look.model.Company">
+        update company set name = #{company.name},
+            address = #{company.address},
+            city = #{company.city},
+            country = #{company.country},
+            email = #{company.email},
+            phone_number = #{company.phoneNumber}
+            where id = #{company.id}
+    </update>
+</mapper>
