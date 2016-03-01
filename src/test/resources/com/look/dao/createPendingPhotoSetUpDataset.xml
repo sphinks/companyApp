@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<dataset>
-    <users id="12" username="testUserName" google_reg_id="12345" />
-    <photos id="3" user_id="12" up_votes="5" down_votes="7" up_votes_since="2" down_votes_since="3" photo_url="test_url1" />
-    <photos id="4" user_id="12" up_votes="78" down_votes="8" up_votes_since="2" down_votes_since="3" photo_url="test_url2" />
-    <photos_status photo_id="3" user_id="12" status="unknown" created_at="1971-01-01 00:00:02.000001"/>
-    <photos_status photo_id="4" user_id="12" status="unknown" created_at="1971-02-01 00:00:02.000001"/>
-</dataset>

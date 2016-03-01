@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<dataset>
-    <photos id="1201" user_id="12" up_votes="0" down_votes="1" up_votes_since="0" down_votes_since="1" reported="0" created_at="1973-01-01 00:00:01.000001"/>
-    <photos id="1202" user_id="12" up_votes="1" down_votes="2" up_votes_since="0" down_votes_since="1" reported="0" created_at="1973-01-01 00:00:03.000002"/>
-    <photos id="1203" user_id="12" up_votes="2" down_votes="3" up_votes_since="0" down_votes_since="1" reported="0" created_at="1973-01-01 00:00:02.000001"/>
-</dataset>

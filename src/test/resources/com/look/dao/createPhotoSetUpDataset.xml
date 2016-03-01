@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<dataset>
-    <photos id="3" user_id="12" up_votes="5" down_votes="7" reported="0" photo_url="url"/>
-    <users id="12" username="username" email="test@test.com"/>
-    <users id="1" username="harold" email="harold@test.com"/>
-</dataset>

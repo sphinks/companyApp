@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<dataset>
-    <users id="12" username="testUserName" google_reg_id="12345" />
-    <photos id="3" user_id="12" up_votes="5" down_votes="7" up_votes_since="0" down_votes_since="1" photo_url="test_url1" />
-    <photos_status/>
-</dataset>

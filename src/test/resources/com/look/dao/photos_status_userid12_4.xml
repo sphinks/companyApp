@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<dataset>
-    <photos_status photo_id="1201" user_id="12" status="unknown" photo_owner_id="1" created_at="1973-01-01 00:00:02.000001"/>
-    <photos_status photo_id="1202" user_id="12" status="unknown" photo_owner_id="3" created_at="1973-01-03 00:00:01.000002"/>
-    <photos_status photo_id="1203" user_id="12" status="unknown" photo_owner_id="2" created_at="1973-01-02 00:00:01.000001"/>
-    <photos_status photo_id="1204" user_id="12" status="dislike" photo_owner_id="2" created_at="1973-01-05 00:00:01.000001"/>
-</dataset>
