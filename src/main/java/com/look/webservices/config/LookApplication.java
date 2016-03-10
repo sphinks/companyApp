@@ -15,6 +15,7 @@ public class LookApplication extends ResourceConfig {
 
         this.register(RequestContextFilter.class);
         //this.register(AuthorizationRequestFilter.class);
+        register(ResponseCorsFilter.class);
 
         // Register resources and providers using package-scanning.
         packages("com.look.webservices");
