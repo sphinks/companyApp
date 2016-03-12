@@ -1,12 +1,13 @@
 <div class="row-fluid">
-    <div class="span8">
-        <h3>All Companies</h3>
-    </div>
-</div>
-<div class="row-fluid" ng-repeat="company in companyList">
-    <div class="span8">
-        <a ui-sref="viewCompany({id:company.id})" class="searchCriteria">{{company.name}}</a>
-        <!--<a class="btn btn-primary" ui-sref="viewMovie({id:movie._id})">View</a>-->
-        <!--<a class="btn btn-danger"  ng-click="deleteMovie(movie)">Delete</a>-->
-    </div>
+    <table class="table">
+        <tr>
+            <td><h3>All Companies</h3></td>
+            <td></td>
+        </tr>
+        <tr ng-repeat="company in companyList">
+            <td><a ui-sref="viewCompany({id:company.id})" class="searchCriteria">{{company.name}}</a></td>
+            <td>
+            </td>
+        </tr>
+    </table>
 </div>
