@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Content-Type" content="text/html"; charset=utf-8" />
+  <meta name="description" content="Find best iPhone cases. Use our search filters by iPhone generation, case color and material to pick the most suitable case from tons of offers on the market." />
+  <meta name="keywords" content="iphone, iphone case search, iphone case, iphone cover, iphone 3 case, iphone 4 case, iphone 5 case, best iphone case, cheap iphone cases, amazon iphone cases" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Company application</title>
+
+  <script src="resources/bootstrap/js/jquery-2.1.4.min.js"></script>
+  <script src="resources/bootstrap/js/bootstrap.js"></script>
+
+  <link rel="stylesheet" href="resources/bootstrap/css/bootstrap.min.css" type="text/css" />
+
+  <style type="text/css">
+    body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+    }
+    .sidebar-nav {
+    padding: 9px 0;
+    }
+  </style>
+</head>
+<body>
+
+
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container-fluid">
+      <a class="brand" href="">CompanyApp.com</a>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row-fluid" ng-controller="CompanyCtrl">
+    <div class="span2">
+      <div class="well sidebar-nav">
+        <ul class="nav nav-list">
+          <li class="nav-header">
+            <a ui-sref="companies" class="searchCriteria">List companies</a>
+          </li>
+          <li class="nav-header">
+            <a ui-sref="newCompany" class="searchCriteria">Add company</a>
+          </li>
+        </ul>
+      </div><!--/.well -->
+    </div><!--/span-->
+
+    <div class="span10">
+      <div class="error-container"></div>
+
+      <div ui-view></div>
+
+    </div><!--/span-->
+  </div><!--/row-->
+  <hr>
+
+  <footer>
+    <p>CompanyApp.com &copy; 2016</p>
+  </footer>
+
+</div><!--/.fluid-container-->
+
+<script src="resources/angular/angular.min.js"></script>
+<script src="resources/angular/angular-resource.min.js"></script>
+<script src="resources/angular/angular-ui-router.min.js"></script>
+<script src="resources/app.js"></script>
+<script src="resources/resources/company.js"></script>
+<script src="resources/controllers/companyControllers.js"></script>
+
+</body>
+</html>

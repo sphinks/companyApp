@@ -1,0 +1,13 @@
+<div class="row-fluid">
+    <table class="table">
+        <tr>
+            <td><h3>All Companies</h3></td>
+            <td></td>
+        </tr>
+        <tr ng-repeat="company in companyList">
+            <td><a ui-sref="viewCompany({id:company.id})" class="searchCriteria">{{company.name}}</a></td>
+            <td>
+            </td>
+        </tr>
+    </table>
+</div>

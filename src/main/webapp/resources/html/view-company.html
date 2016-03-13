@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="span8">
+        <table class="table">
+            <tr>
+                <td><h3>Company {{company.name}}</h3></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td>{{company.address}}</td>
+            </tr>
+            <tr>
+                <td>City</td>
+                <td>{{company.city}}</td>
+            </tr>
+            <tr>
+                <td>Country</td>
+                <td>{{company.country}}</td>
+            </tr>
+            <tr>
+                <td>E-mail</td>
+                <td>{{company.email}}</td>
+            </tr>
+            <tr>
+                <td>Phone number</td>
+                <td>{{company.phoneNumber}}</td>
+            </tr>
+            <tr>
+                <td>Beneficials</td>
+                <td>
+                    <p ng-repeat="beneficial in company.beneficials">{{beneficial.name}}</p>
+                </td>
+            </tr>
+        </table>
+        <div>
+            <a class="btn btn-primary" ui-sref="editCompany({id:company.id})">Edit company</a>
+        </div>
+    </div>
+</div>
