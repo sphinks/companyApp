@@ -9,18 +9,6 @@
     <packaging>war</packaging>
     <name>company-app</name>
 
-    <repositories>
-        <repository>
-            <id>gcm-server-repository</id>
-            <url>https://github.com/slorber/gcm-server-repository/raw/master/releases/</url>
-        </repository>
-        <repository>
-            <id>project.local</id>
-            <name>project</name>
-            <url>file:${project.basedir}/repo</url>
-        </repository>
-    </repositories>
-
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -175,12 +163,6 @@
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjrt</artifactId>
             <version>1.8.2</version>
-        </dependency>
-
-        <dependency>
-            <groupId>javapns</groupId>
-            <artifactId>javapns</artifactId>
-            <version>2.2</version>
         </dependency>
 
         <dependency>
