@@ -1,6 +1,6 @@
 app.factory('Company', function ($resource, errorHandler) {
 
-    var requestUri = 'http://localhost:8080/rest/companies/:id';
+    var requestUri = 'rest/companies/:id';
 
     return $resource(requestUri,
         { id: '@id' },
