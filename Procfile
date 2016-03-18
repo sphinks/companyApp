@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -Dprofile=heroku -jar target/dependency/webapp-runner.jar --port $PORT target/*.war
+web: java $JAVA_OPTS -Dprofile=heroku -jar target/dependency/webapp-runner.jar --port $PORT target/companyApp.war
