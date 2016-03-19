@@ -30,13 +30,13 @@ Request to create new company:
 
 *BODY ARGUMENTS*
 
-`name` **required**
-`address` **required**
-`city` **required**
-`country` **required**
-`beneficials` **required**
-`email` *optional*
-`phoneNumber` *optional*
+`name` **required**  
+`address` **required**  
+`city` **required**  
+`country` **required**  
+`beneficials` **required**  
+`email` *optional*  
+`phoneNumber` *optional*  
 
 Creating of beneficial will be performed automatically in case `beneficials` will be not empty. For a beneficial object, only one field are required `name`.
 
@@ -76,7 +76,7 @@ Request to get details of an existing company:
 `GET /companies/{company_id}`
 
 *URL ARGUMENTS*
-`company_id` **required**
+`company_id` **required**  
 
 *Request Example*
 
