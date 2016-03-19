@@ -30,11 +30,11 @@ Request to create new company:
 
 *BODY ARGUMENTS*
 
-`name` ==required==
-`address` ==required==
-`city` ==required==
-`country` ==required==
-`beneficials` ==required==
+`name` **required**
+`address` **required**
+`city` **required**
+`country` **required**
+`beneficials` **required**
 `email` *optional*
 `phoneNumber` *optional*
 
@@ -76,7 +76,7 @@ Request to get details of an existing company:
 `GET /companies/{company_id}`
 
 *URL ARGUMENTS*
-`company_id` ==required==
+`company_id` **required**
 
 *Request Example*
 
