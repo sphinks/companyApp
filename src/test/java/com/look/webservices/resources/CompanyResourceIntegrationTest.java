@@ -90,10 +90,9 @@ public class CompanyResourceIntegrationTest extends AbstractIntegrationTest {
 
         assertThat(response.getStatus(), is(Response.Status.OK.getStatusCode()));
 
-        String result = response.readEntity(String.class);
-        String companyId = result.split("=")[1];
+        Company result = response.readEntity(Company.class);
 
-        assertThat(Integer.parseInt(companyId), greaterThan(0));
+        assertThat(result.getId(), greaterThan(0));
 
         response = target("/companies").request().post(Entity.json("{\"address\":\"Bishop's Gate str., 1\",\"beneficials\":[{\"name\":\"BeneficialName\"}]," +
                 "\"city\":\"London\",\"country\":\"England\",\"email\":\"test@company2.com\"" +
@@ -101,10 +100,9 @@ public class CompanyResourceIntegrationTest extends AbstractIntegrationTest {
 
         assertThat(response.getStatus(), is(Response.Status.OK.getStatusCode()));
 
-        result = response.readEntity(String.class);
-        companyId = result.split("=")[1];
+        result = response.readEntity(Company.class);
 
-        assertThat(Integer.parseInt(companyId), greaterThan(0));
+        assertThat(result.getId(), greaterThan(0));
 
     }
 

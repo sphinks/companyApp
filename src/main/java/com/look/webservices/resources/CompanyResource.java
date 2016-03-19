@@ -41,22 +41,20 @@ public class CompanyResource {
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.TEXT_PLAIN)
-    public Response addCompany(Company company) {
+    @Produces(MediaType.APPLICATION_JSON)
+    public Company addCompany(Company company) {
 
         ValidationUtils.validateCompanyObject(company);
         companyService.addCompany(company);
 
-        return Response.ok()
-            .entity("companyId=" + company.getId())
-            .build();
+        return company;
     }
 
     @PUT
     @Path("{companyId}")
     @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.TEXT_PLAIN)
-    public Response updateCompany(@PathParam("companyId") String companyId, Company newCompanyInfo) {
+    @Produces(MediaType.APPLICATION_JSON)
+    public Company updateCompany(@PathParam("companyId") String companyId, Company newCompanyInfo) {
 
         ValidationUtils.validateCompanyObject(newCompanyInfo);
         Company company = companyService.getCompanyInfo(companyId);
@@ -64,9 +62,7 @@ public class CompanyResource {
 
         companyService.updateCompanyInfo(newCompanyInfo);
 
-        return Response.ok()
-                .entity("companyId=" + newCompanyInfo.getId())
-                .build();
+        return newCompanyInfo;
     }
 
     @POST
